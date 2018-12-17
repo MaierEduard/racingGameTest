@@ -1,13 +1,24 @@
 package org.fasttrackit;
 
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+Cars firstCompetitor = new Cars();
+firstCompetitor.name = "Dacia";
+firstCompetitor.colar = "black";
+firstCompetitor.doorCount = 4;
+firstCompetitor.mileage = 7.5;
+
+Engine firstEngie = new Engine();
+firstEngie.manufacturer = "BMW";
+
+Engine secondEngie = new Engine();
+secondEngie.manufacturer = "Skoda";
+
+
+
+
     }
 }
