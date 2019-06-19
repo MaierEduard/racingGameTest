@@ -2,34 +2,51 @@ package org.fasttrackit;
 
 
 public class App {
+
+
+    public double sumNumber(int a, int b,int c ) {
+        double sum = (a + b +c)/3;
+        System.out.println(sum+ "+++++++++++++++++++");
+
+        return sum;
+    }
+    
     public static void main(String[] args) {
 
-        Engine engine = new Engine();
-        engine.manufacure = "BMW";
 
-        Car firstCompetitor = new Car();
-        firstCompetitor.name = "Dacia";
-        firstCompetitor.doorCount = 4;
-        firstCompetitor.color = "black";
-        firstCompetitor.mileage=7.5;
-        firstCompetitor.engine = engine;
-        firstCompetitor.running = true;
-        firstCompetitor.fuelLevel = 50;
+
+        Engine engine = new Engine();
+        engine.setManufacure("BMW");
+
+        Car firstCompetitor = new Car(engine);
+        firstCompetitor.setName("Dacia");
+        firstCompetitor.setDoorCount(4);
+        firstCompetitor.setColor("black");
+        firstCompetitor.setMileage(7.5);
+        firstCompetitor.setEngine(engine);
+        firstCompetitor.setRunning(true);
+        firstCompetitor.setFuelLevel(50);
         double distanceFirstCompetitor = firstCompetitor.accelerate(60, 0.50);
 
         System.out.println("distance first competitor in App.Main" + distanceFirstCompetitor);
 
 
-        Car secondCompetitor = new Car();
-        secondCompetitor.name = "Skoda";
-        secondCompetitor.doorCount = 4;
-        secondCompetitor.color = "White";
-        secondCompetitor.mileage=7.5;
-        secondCompetitor.engine = engine;
-        secondCompetitor.running = true;
-        firstCompetitor. fuelLevel = 40;
+        Car secondCompetitor = new Car( new Engine());
+        firstCompetitor.setName("Skoda");
+        firstCompetitor.setDoorCount(4);
+        firstCompetitor.setColor("White");
+        firstCompetitor.setMileage(7.5);
+        firstCompetitor.setEngine(engine);
+        firstCompetitor.setRunning(true);
+        firstCompetitor.setFuelLevel(40);
         double distanceSecondCompetitor = secondCompetitor.accelerate(30, 0.8);
         System.out.println("distance second competitor" + distanceSecondCompetitor);
 
+
+
     }
+
+
+
+
 }
